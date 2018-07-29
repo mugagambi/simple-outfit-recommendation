@@ -22,3 +22,5 @@ Route::resource('weather-groups', 'WeatherGroupsController')->middleware('auth')
     ->except(['show']);
 Route::resource('events', 'EventController')->middleware('auth')
     ->except(['show']);
+Route::resource('dress-code', 'DressModeController')->middleware('auth')
+    ->except(['show']);

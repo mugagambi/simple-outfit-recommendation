@@ -42,7 +42,7 @@
                                 <a class="nav-link" href="{{ route('events.index') }}">Events</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('events.index') }}">Dress Code</a>
+                                <a class="nav-link" href="{{ route('dress-code.index') }}">Dress Code</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('events.index') }}">Outfit Categories</a>

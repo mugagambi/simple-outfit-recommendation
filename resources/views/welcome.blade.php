@@ -594,7 +594,7 @@
     <div class="container">
         <div class=" header-side text-center">
             <p>©
-                2018 Outfit. All Rights Reserved | Design by <a href="http://www.W3Layouts.com" target="_blank">W3Layouts</a>
+                2018 Outfit. All Rights Reserved
             </p>
             <div class="buttom-social-grids">
                 <ul>
