@@ -20,3 +20,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('weather-groups', 'WeatherGroupsController')->middleware('auth')
     ->except(['show']);
+Route::resource('events', 'EventController')->middleware('auth')
+    ->except(['show']);

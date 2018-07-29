@@ -76,7 +76,7 @@ class WeatherGroupsController extends Controller
     public function destroy(WeatherGroup $weatherGroup)
     {
         $weatherGroup->delete();
-        flash('weather group created successfully')->success();
+        flash('weather group removed successfully')->success();
         return redirect()->route('weather-groups.index');
     }
 }

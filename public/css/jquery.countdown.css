@@ -1,0 +1,155 @@
+.countdownHolder{
+	font: 23px/0.8  'Quicksand', sans-serif;
+    height: 89px;
+}
+.position{
+	display: inline-block;
+	height: 1.8em;
+	position: relative;
+	width: 41px;
+	font-weight: 500;
+	font-size: 0.85em;
+}
+.digit {
+    color:#fff;
+    font-size: 70px;
+    letter-spacing: -6px;
+    left: 3px;
+    bottom: 0;
+    position: absolute;
+	 font-family: 'Open Sans Condensed';
+
+}
+/* 
+.countDays{
+    background:none;
+	/* display:none !important;*/ 
+}
+/*.countDiv0{ /* display:none !important;* / }
+.countHours {
+    background:none;
+}
+.countDiv1{}
+.countMinutes {
+    background:none;
+}
+.countDiv2{}
+.countSeconds{
+    background:none;
+}*/ 
+.countDiv{
+	/*--display:inline-block;
+	width:16px;
+	height:1.6em;
+	position:relative;--*/
+	display:none;
+}
+.countDiv:after{
+	top:0.9em;
+}
+/*--responsive design--*/
+@media(max-width:1440px){
+.digit {
+    font-size: 62px;
+}
+}
+@media(max-width:1050px){
+.digit {
+    font-size: 58px;
+}	
+}
+@media(max-width:1024px){
+	.countDays, .countHours,
+ .countMinutes, .countSeconds {
+    padding: 35px 0;
+}
+.boxName {
+    padding: 10px;
+}
+.digit {
+    font-size: 65px;
+}
+#counter {
+    height: 151px;
+}
+}
+@media(max-width:991px){
+.timer_wrap {
+    width: 88%;
+}
+.digit {
+    font-size: 60px;
+}
+}
+@media(max-width:800px){
+.timer_wrap {
+    width: 93%;
+}
+.digit {
+    font-size: 52px;
+}
+.countDays, .countHours, .countMinutes, .countSeconds {
+    padding: 30px 0;
+}
+.position {
+    height: 1.6em;
+}
+}
+@media(max-width:768px){
+
+}
+@media(max-width:667px){
+.position {
+    width: 34px;
+}
+.timer_wrap {
+    width: 96%;
+}
+}
+@media(max-width:600px){
+.countDays, .countHours, .countMinutes, .countSeconds {
+    padding: 26px 0;
+}
+.digit {
+    font-size: 48px;
+}
+}
+@media(max-width:480px){
+#counter {
+    height: 128px;
+}
+}
+@media(max-width:440px){
+
+.digit {
+	    left: 6px;
+    font-size: 42px;
+}
+.position {
+    width: 29px;
+}
+}
+@media(max-width:414px){
+	.digit {
+	    left: 0px;
+	}
+.position {
+    width: 25px;
+}
+}
+@media(max-width:384px){
+.position{width: 27px;}	
+.timer_wrap {
+    width: 100%;
+}
+#counter {
+    height: 115px;
+}
+.digit {
+    font-size: 38px;
+}
+.boxName{
+	padding:4px;
+}
+}
+/*--/responsive design--*/

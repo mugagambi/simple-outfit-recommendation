@@ -38,6 +38,18 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('weather-groups.index') }}">Weather Groups</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('events.index') }}">Events</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('events.index') }}">Dress Code</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('events.index') }}">Outfit Categories</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('events.index') }}">App Users</a>
+                            </li>
                             @endif
                     </ul>
 
