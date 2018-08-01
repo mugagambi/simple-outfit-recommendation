@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title')
-    Add dress code
+    Add Outfit Category |
     @endsection
 @section('content')
     <link rel="stylesheet" href="{{asset('css/selectize.bootstrap3.css')}}">
@@ -8,10 +8,10 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Add Dress code</div>
+                    <div class="card-header">Add Outfit Category</div>
 
                     <div class="card-body">
-                        <form method="POST" action="{{ route('outfit-categories.store') }}" aria-label="Add dress code">
+                        <form method="POST" action="{{ route('outfit-categories.store') }}" aria-label="Add Outfit Category">
                             @csrf
 
                             <div class="form-group row">

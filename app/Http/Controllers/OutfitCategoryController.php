@@ -55,17 +55,6 @@ class OutfitCategoryController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  \App\OutfitCategory  $outfitCategory
-     * @return \Illuminate\Http\Response
-     */
-    public function show(OutfitCategory $outfitCategory)
-    {
-        //
-    }
-
-    /**
      * Show the form for editing the specified resource.
      *
      * @param  \App\OutfitCategory  $outfitCategory
@@ -73,7 +62,10 @@ class OutfitCategoryController extends Controller
      */
     public function edit(OutfitCategory $outfitCategory)
     {
-        //
+        $dress_codes = DressMode::all();
+        $events = Event::all();
+        $weather = WeatherGroup::all();
+        return view('outfit-category.edit', ['outfit' => $outfitCategory,'dress_codes' => $dress_codes,'events' => $events, 'weather' => $weather]);
     }
 
     /**
@@ -85,17 +77,32 @@ class OutfitCategoryController extends Controller
      */
     public function update(Request $request, OutfitCategory $outfitCategory)
     {
-        //
+        $request->validate([
+            'name' => 'required|max:255'
+        ]);
+        $outfitCategory->name = $request->input('name');
+        $outfitCategory->save();
+        $outfitCategory->weather_groups()->sync($request->input('weather'));
+        $outfitCategory->events()->sync($request->input('events'));
+        $outfitCategory->dress_modes()->sync($request->input('dress'));
+        flash('category updated successfully')->success();
+        return redirect()->route('outfit-categories.index');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\OutfitCategory  $outfitCategory
+     * @param  \App\OutfitCategory $outfitCategory
      * @return \Illuminate\Http\Response
+     * @throws \Exception
      */
     public function destroy(OutfitCategory $outfitCategory)
     {
-        //
+        $outfitCategory->weather_groups()->sync([]);
+        $outfitCategory->events()->sync([]);
+        $outfitCategory->dress_modes()->sync([]);
+        $outfitCategory->delete();
+        flash('category removed successfully')->success();
+        return redirect()->route('outfit-categories.index');
     }
 }

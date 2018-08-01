@@ -1,29 +1,62 @@
 @extends('layouts.app')
 @section('title')
-    Edit dress code
+    Edit Outfit Category |
 @endsection
 @section('content')
+    <link rel="stylesheet" href="{{asset('css/selectize.bootstrap3.css')}}">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Edit Dress code</div>
+                    <div class="card-header">Edit Outfit Category</div>
 
                     <div class="card-body">
-                        <form method="POST" action="{{ route('dress-code.update', ['dress_code' => $dress_code->id]) }}" aria-label="Edit dress code">
+                        <form method="POST" action="{{ route('outfit-categories.update', ['outfit_category' => $outfit->id]) }}" aria-label="Edit Outfit Category">
                             @csrf
                             @method('PUT')
+
                             <div class="form-group row">
                                 <label for="name" class="col-md-4 col-form-label text-md-right">Name</label>
 
                                 <div class="col-md-6">
-                                    <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ $dress_code->name }}" required autofocus>
-                                    <small id="emailHelp" class="form-text text-muted">E.g, casual,official,white</small>
+                                    <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ $outfit->name }}" required autofocus>
                                     @if ($errors->has('name'))
                                         <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('name') }}</strong>
                                     </span>
                                     @endif
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="name" class="col-md-4 col-form-label text-md-right">Weather groups</label>
+                                <div class="col-md-6">
+                                    <select multiple class="form-control" id="weather_groups" name="weather[]">
+                                        @foreach($weather as $group)
+                                            @foreach($outfit->weather_groups as $selected)
+                                            <option value="{{$group->id}}">{{$group->name}}</option>
+                                                @endforeach
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="name" class="col-md-4 col-form-label text-md-right">Events</label>
+                                <div class="col-md-6">
+                                    <select multiple class="form-control" id="weather_groups" name="events[]">
+                                        @foreach($events as $event)
+                                            <option value="{{$event->id}}">{{$event->name}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="name" class="col-md-4 col-form-label text-md-right">Dress Codes</label>
+                                <div class="col-md-6">
+                                    <select multiple class="form-control" id="weather_groups" name="dress[]">
+                                        @foreach($dress_codes as $code)
+                                            <option value="{{$code->id}}">{{$code->name}}</option>
+                                        @endforeach
+                                    </select>
                                 </div>
                             </div>
                             <div class="form-group row mb-0">
@@ -39,4 +72,10 @@
             </div>
         </div>
     </div>
+    <script src="{{asset('js/selectize.min.js')}}"></script>
+    <script>
+        $('select').selectize({
+            create: false,
+        });
+    </script>
 @endsection
