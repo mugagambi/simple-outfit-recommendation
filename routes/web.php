@@ -24,3 +24,5 @@ Route::resource('events', 'EventController')->middleware('auth')
     ->except(['show']);
 Route::resource('dress-code', 'DressModeController')->middleware('auth')
     ->except(['show']);
+Route::resource('outfit-categories', 'OutfitCategoryController')->middleware('auth')
+    ->except(['show']);
