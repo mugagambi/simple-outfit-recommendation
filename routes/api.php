@@ -16,3 +16,6 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/weather-groups', 'Api\WeatherGroupController@index');
+Route::get('/weather-groups/{id}', 'Api\WeatherGroupController@show');
