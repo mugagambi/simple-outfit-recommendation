@@ -19,3 +19,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('/weather-groups', 'Api\WeatherGroupController@index');
 Route::get('/weather-groups/{id}', 'Api\WeatherGroupController@show');
+Route::get('/events', 'Api\EventController@index');
+Route::get('/events/{id}', 'Api\EventController@show');

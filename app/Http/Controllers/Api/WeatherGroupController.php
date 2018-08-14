@@ -20,7 +20,7 @@ class WeatherGroupController extends Controller
      */
     public function index()
     {
-        return new WeatherGroupResourceCollection(WeatherGroup::paginate());
+        return new WeatherGroupResourceCollection(WeatherGroup::paginate(20));
     }
 
     /**

@@ -19,6 +19,125 @@ Welcome to the generated API reference.
 [Get Postman Collection](http://localhost/docs/collection.json)
 <!-- END_INFO -->
 
+#Events
+Events api resource
+<!-- START_0f5e59e5d39a318daed6631442199c5d -->
+## return all events in the system
+
+> Example request:
+
+```bash
+curl -X GET "http://localhost/api/events" \
+-H "Accept: application/json"
+```
+
+```javascript
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://localhost/api/events",
+    "method": "GET",
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});
+```
+
+> Example response:
+
+```json
+{
+    "data": [
+        {
+            "id": 1,
+            "name": "party",
+            "created_at": "2018-07-29 18:19:28",
+            "updated_at": "2018-07-29 18:19:28"
+        },
+        {
+            "id": 2,
+            "name": "date",
+            "created_at": "2018-07-29 18:19:35",
+            "updated_at": "2018-07-29 18:19:35"
+        }
+    ],
+    "links": {
+        "first": "http:\/\/localhost\/api\/events?page=1",
+        "last": "http:\/\/localhost\/api\/events?page=1",
+        "prev": null,
+        "next": null
+    },
+    "meta": {
+        "current_page": 1,
+        "from": 1,
+        "last_page": 1,
+        "path": "http:\/\/localhost\/api\/events",
+        "per_page": 20,
+        "to": 2,
+        "total": 2
+    }
+}
+```
+
+### HTTP Request
+`GET api/events`
+
+`HEAD api/events`
+
+
+<!-- END_0f5e59e5d39a318daed6631442199c5d -->
+
+<!-- START_2f937339643bb255988a5ee41f56547c -->
+## return a certain event
+
+> Example request:
+
+```bash
+curl -X GET "http://localhost/api/events/{id}" \
+-H "Accept: application/json"
+```
+
+```javascript
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://localhost/api/events/{id}",
+    "method": "GET",
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});
+```
+
+> Example response:
+
+```json
+{
+    "data": {
+        "id": 1,
+        "name": "party",
+        "created_at": "2018-07-29 18:19:28",
+        "updated_at": "2018-07-29 18:19:28"
+    }
+}
+```
+
+### HTTP Request
+`GET api/events/{id}`
+
+`HEAD api/events/{id}`
+
+
+<!-- END_2f937339643bb255988a5ee41f56547c -->
+
 #WeatherGroup
 Weather Groups Api Resource
 <!-- START_40a1e4796345e29908a5a9580142e7d0 -->
@@ -76,7 +195,7 @@ $.ajax(settings).done(function (response) {
         "from": 1,
         "last_page": 1,
         "path": "http:\/\/localhost\/api\/weather-groups",
-        "per_page": 15,
+        "per_page": 20,
         "to": 2,
         "total": 2
     }
