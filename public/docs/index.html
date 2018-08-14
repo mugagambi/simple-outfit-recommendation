@@ -48,6 +48,101 @@
 <p>Welcome to the generated API reference.
 <a href="http://localhost/docs/collection.json">Get Postman Collection</a></p>
 <!-- END_INFO -->
+<h1>Dress Codes</h1>
+<p>Dress Code Api Resource</p>
+<!-- START_e58560675c9fdf08730f76352d6075a1 -->
+<h2>return all the dress codes</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET "http://localhost/api/dresscodes" \
+-H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://localhost/api/dresscodes",
+    "method": "GET",
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+<blockquote>
+<p>Example response:</p>
+</blockquote>
+<pre><code class="language-json">{
+    "data": [
+        {
+            "id": 1,
+            "name": "official",
+            "created_at": "2018-07-29 19:33:51",
+            "updated_at": "2018-07-29 19:33:51"
+        },
+        {
+            "id": 2,
+            "name": "casual",
+            "created_at": "2018-07-29 19:50:58",
+            "updated_at": "2018-07-29 20:04:08"
+        }
+    ],
+    "links": {
+        "first": "http:\/\/localhost\/api\/dresscodes?page=1",
+        "last": "http:\/\/localhost\/api\/dresscodes?page=1",
+        "prev": null,
+        "next": null
+    },
+    "meta": {
+        "current_page": 1,
+        "from": 1,
+        "last_page": 1,
+        "path": "http:\/\/localhost\/api\/dresscodes",
+        "per_page": 20,
+        "to": 2,
+        "total": 2
+    }
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/dresscodes</code></p>
+<p><code>HEAD api/dresscodes</code></p>
+<!-- END_e58560675c9fdf08730f76352d6075a1 -->
+<!-- START_351ead3503296953ce637bffa5cd8bff -->
+<h2>return a certain dress code</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET "http://localhost/api/dresscodes/{id}" \
+-H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://localhost/api/dresscodes/{id}",
+    "method": "GET",
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+<blockquote>
+<p>Example response:</p>
+</blockquote>
+<pre><code class="language-json">{
+    "data": {
+        "id": 1,
+        "name": "official",
+        "created_at": "2018-07-29 19:33:51",
+        "updated_at": "2018-07-29 19:33:51"
+    }
+}</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/dresscodes/{id}</code></p>
+<p><code>HEAD api/dresscodes/{id}</code></p>
+<!-- END_351ead3503296953ce637bffa5cd8bff -->
 <h1>Events</h1>
 <p>Events api resource</p>
 <!-- START_0f5e59e5d39a318daed6631442199c5d -->
@@ -143,7 +238,7 @@ $.ajax(settings).done(function (response) {
 <p><code>GET api/events/{id}</code></p>
 <p><code>HEAD api/events/{id}</code></p>
 <!-- END_2f937339643bb255988a5ee41f56547c -->
-<h1>WeatherGroup</h1>
+<h1>WeatherGroups</h1>
 <p>Weather Groups Api Resource</p>
 <!-- START_40a1e4796345e29908a5a9580142e7d0 -->
 <h2>List all weather groups</h2>

@@ -9,7 +9,7 @@ use App\Http\Resources\WeatherGroupResourceCollection;
 use App\Http\Resources\WeatherGroupResource;
 
 /**
- * @resource WeatherGroup
+ * @resource WeatherGroups
  *Weather Groups Api Resource
  */
 class WeatherGroupController extends Controller
