@@ -16,7 +16,7 @@ toc_footers:
 # Info
 
 Welcome to the generated API reference.
-[Get Postman Collection](http://localhost/docs/collection.json)
+[Get Postman Collection](http://oufit.herokuapp.com/docs/collection.json)
 <!-- END_INFO -->
 
 #Dress Codes
@@ -27,7 +27,7 @@ Dress Code Api Resource
 > Example request:
 
 ```bash
-curl -X GET "http://localhost/api/dresscodes" \
+curl -X GET "http://oufit.herokuapp.com/api/dresscodes" \
 -H "Accept: application/json"
 ```
 
@@ -35,7 +35,7 @@ curl -X GET "http://localhost/api/dresscodes" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost/api/dresscodes",
+    "url": "http://oufit.herokuapp.com/api/dresscodes",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -50,37 +50,7 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-{
-    "data": [
-        {
-            "id": 1,
-            "name": "official",
-            "created_at": "2018-07-29 19:33:51",
-            "updated_at": "2018-07-29 19:33:51"
-        },
-        {
-            "id": 2,
-            "name": "casual",
-            "created_at": "2018-07-29 19:50:58",
-            "updated_at": "2018-07-29 20:04:08"
-        }
-    ],
-    "links": {
-        "first": "http:\/\/localhost\/api\/dresscodes?page=1",
-        "last": "http:\/\/localhost\/api\/dresscodes?page=1",
-        "prev": null,
-        "next": null
-    },
-    "meta": {
-        "current_page": 1,
-        "from": 1,
-        "last_page": 1,
-        "path": "http:\/\/localhost\/api\/dresscodes",
-        "per_page": 20,
-        "to": 2,
-        "total": 2
-    }
-}
+null
 ```
 
 ### HTTP Request
@@ -97,7 +67,7 @@ $.ajax(settings).done(function (response) {
 > Example request:
 
 ```bash
-curl -X GET "http://localhost/api/dresscodes/{id}" \
+curl -X GET "http://oufit.herokuapp.com/api/dresscodes/{id}" \
 -H "Accept: application/json"
 ```
 
@@ -105,7 +75,7 @@ curl -X GET "http://localhost/api/dresscodes/{id}" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost/api/dresscodes/{id}",
+    "url": "http://oufit.herokuapp.com/api/dresscodes/{id}",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -120,14 +90,7 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-{
-    "data": {
-        "id": 1,
-        "name": "official",
-        "created_at": "2018-07-29 19:33:51",
-        "updated_at": "2018-07-29 19:33:51"
-    }
-}
+null
 ```
 
 ### HTTP Request
@@ -146,7 +109,7 @@ Events api resource
 > Example request:
 
 ```bash
-curl -X GET "http://localhost/api/events" \
+curl -X GET "http://oufit.herokuapp.com/api/events" \
 -H "Accept: application/json"
 ```
 
@@ -154,7 +117,7 @@ curl -X GET "http://localhost/api/events" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost/api/events",
+    "url": "http://oufit.herokuapp.com/api/events",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -169,37 +132,7 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-{
-    "data": [
-        {
-            "id": 1,
-            "name": "party",
-            "created_at": "2018-07-29 18:19:28",
-            "updated_at": "2018-07-29 18:19:28"
-        },
-        {
-            "id": 2,
-            "name": "date",
-            "created_at": "2018-07-29 18:19:35",
-            "updated_at": "2018-07-29 18:19:35"
-        }
-    ],
-    "links": {
-        "first": "http:\/\/localhost\/api\/events?page=1",
-        "last": "http:\/\/localhost\/api\/events?page=1",
-        "prev": null,
-        "next": null
-    },
-    "meta": {
-        "current_page": 1,
-        "from": 1,
-        "last_page": 1,
-        "path": "http:\/\/localhost\/api\/events",
-        "per_page": 20,
-        "to": 2,
-        "total": 2
-    }
-}
+null
 ```
 
 ### HTTP Request
@@ -216,7 +149,7 @@ $.ajax(settings).done(function (response) {
 > Example request:
 
 ```bash
-curl -X GET "http://localhost/api/events/{id}" \
+curl -X GET "http://oufit.herokuapp.com/api/events/{id}" \
 -H "Accept: application/json"
 ```
 
@@ -224,7 +157,7 @@ curl -X GET "http://localhost/api/events/{id}" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost/api/events/{id}",
+    "url": "http://oufit.herokuapp.com/api/events/{id}",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -239,14 +172,7 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-{
-    "data": {
-        "id": 1,
-        "name": "party",
-        "created_at": "2018-07-29 18:19:28",
-        "updated_at": "2018-07-29 18:19:28"
-    }
-}
+null
 ```
 
 ### HTTP Request
@@ -257,15 +183,15 @@ $.ajax(settings).done(function (response) {
 
 <!-- END_2f937339643bb255988a5ee41f56547c -->
 
-#WeatherGroups
-Weather Groups Api Resource
-<!-- START_40a1e4796345e29908a5a9580142e7d0 -->
-## List all weather groups
+#Outfit Categories
+outfit categories api resource
+<!-- START_1279af338159dcffcf3c88d97fc5b3a3 -->
+## return outfit categories
 
 > Example request:
 
 ```bash
-curl -X GET "http://localhost/api/weather-groups" \
+curl -X GET "http://oufit.herokuapp.com/api/outfit-categories" \
 -H "Accept: application/json"
 ```
 
@@ -273,7 +199,7 @@ curl -X GET "http://localhost/api/weather-groups" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost/api/weather-groups",
+    "url": "http://oufit.herokuapp.com/api/outfit-categories",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -288,37 +214,89 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-{
-    "data": [
-        {
-            "id": 1,
-            "name": "rainy",
-            "created_at": "2018-07-29 17:24:02",
-            "updated_at": "2018-07-29 17:24:02"
-        },
-        {
-            "id": 2,
-            "name": "windy",
-            "created_at": "2018-07-29 17:25:24",
-            "updated_at": "2018-07-29 17:38:49"
-        }
-    ],
-    "links": {
-        "first": "http:\/\/localhost\/api\/weather-groups?page=1",
-        "last": "http:\/\/localhost\/api\/weather-groups?page=1",
-        "prev": null,
-        "next": null
-    },
-    "meta": {
-        "current_page": 1,
-        "from": 1,
-        "last_page": 1,
-        "path": "http:\/\/localhost\/api\/weather-groups",
-        "per_page": 20,
-        "to": 2,
-        "total": 2
+null
+```
+
+### HTTP Request
+`GET api/outfit-categories`
+
+`HEAD api/outfit-categories`
+
+
+<!-- END_1279af338159dcffcf3c88d97fc5b3a3 -->
+
+<!-- START_d24fdd4349f20e6a5014120d7f04006f -->
+## return an outfit category
+
+> Example request:
+
+```bash
+curl -X GET "http://oufit.herokuapp.com/api/outfit-categories/{id}" \
+-H "Accept: application/json"
+```
+
+```javascript
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://oufit.herokuapp.com/api/outfit-categories/{id}",
+    "method": "GET",
+    "headers": {
+        "accept": "application/json"
     }
 }
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});
+```
+
+> Example response:
+
+```json
+null
+```
+
+### HTTP Request
+`GET api/outfit-categories/{id}`
+
+`HEAD api/outfit-categories/{id}`
+
+
+<!-- END_d24fdd4349f20e6a5014120d7f04006f -->
+
+#WeatherGroups
+Weather Groups Api Resource
+<!-- START_40a1e4796345e29908a5a9580142e7d0 -->
+## List all weather groups
+
+> Example request:
+
+```bash
+curl -X GET "http://oufit.herokuapp.com/api/weather-groups" \
+-H "Accept: application/json"
+```
+
+```javascript
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://oufit.herokuapp.com/api/weather-groups",
+    "method": "GET",
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});
+```
+
+> Example response:
+
+```json
+null
 ```
 
 ### HTTP Request
@@ -335,7 +313,7 @@ $.ajax(settings).done(function (response) {
 > Example request:
 
 ```bash
-curl -X GET "http://localhost/api/weather-groups/{id}" \
+curl -X GET "http://oufit.herokuapp.com/api/weather-groups/{id}" \
 -H "Accept: application/json"
 ```
 
@@ -343,7 +321,7 @@ curl -X GET "http://localhost/api/weather-groups/{id}" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost/api/weather-groups/{id}",
+    "url": "http://oufit.herokuapp.com/api/weather-groups/{id}",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -358,14 +336,7 @@ $.ajax(settings).done(function (response) {
 > Example response:
 
 ```json
-{
-    "data": {
-        "id": 1,
-        "name": "rainy",
-        "created_at": "2018-07-29 17:24:02",
-        "updated_at": "2018-07-29 17:24:02"
-    }
-}
+null
 ```
 
 ### HTTP Request
@@ -375,4 +346,100 @@ $.ajax(settings).done(function (response) {
 
 
 <!-- END_db23914d5df1afe92c1ad7984b017ec5 -->
+
+#general
+<!-- START_c3fa189a6c95ca36ad6ac4791a873d23 -->
+## login api
+
+> Example request:
+
+```bash
+curl -X POST "http://oufit.herokuapp.com/api/login" \
+-H "Accept: application/json" \
+    -d "email"="uzieme@example.org" \
+    -d "password"="rerum" \
+
+```
+
+```javascript
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://oufit.herokuapp.com/api/login",
+    "method": "POST",
+    "data": {
+        "email": "uzieme@example.org",
+        "password": "rerum"
+},
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});
+```
+
+
+### HTTP Request
+`POST api/login`
+
+#### Parameters
+
+Parameter | Type | Status | Description
+--------- | ------- | ------- | ------- | -----------
+    email | email |  required  | 
+    password | string |  required  | 
+
+<!-- END_c3fa189a6c95ca36ad6ac4791a873d23 -->
+
+<!-- START_d7b7952e7fdddc07c978c9bdaf757acf -->
+## Register api
+
+> Example request:
+
+```bash
+curl -X POST "http://oufit.herokuapp.com/api/register" \
+-H "Accept: application/json" \
+    -d "name"="et" \
+    -d "email"="milo77@example.org" \
+    -d "password"="et" \
+
+```
+
+```javascript
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://oufit.herokuapp.com/api/register",
+    "method": "POST",
+    "data": {
+        "name": "et",
+        "email": "milo77@example.org",
+        "password": "et"
+},
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});
+```
+
+
+### HTTP Request
+`POST api/register`
+
+#### Parameters
+
+Parameter | Type | Status | Description
+--------- | ------- | ------- | ------- | -----------
+    name | string |  required  | 
+    email | email |  required  | 
+    password | string |  required  | 
+
+<!-- END_d7b7952e7fdddc07c978c9bdaf757acf -->
 

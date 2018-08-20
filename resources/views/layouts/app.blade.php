@@ -10,9 +10,6 @@
 
     <title>@yield('title') {{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
-
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
@@ -87,7 +84,7 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="py-4" id="app">
             <div class="row">
                 <div class="col-md-6 offset-md-3">
                     @include('flash::message')
@@ -96,5 +93,7 @@
             @yield('content')
         </main>
     </div>
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
