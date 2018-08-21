@@ -19,6 +19,8 @@ class CreateOutfitsTable extends Migration
             $table->text('photo_url')->nullable();
             $table->unsignedInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
+            $table->unsignedInteger('outfit_category_id');
+            $table->foreign('outfit_category_id')->references('id')->on('outfit_categories');
             $table->timestamps();
         });
     }
