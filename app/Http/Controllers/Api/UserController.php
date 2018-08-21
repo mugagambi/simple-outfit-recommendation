@@ -14,12 +14,18 @@ use JWTAuth;
 use Tymon\JWTAuth\Exceptions\JWTException;
 use Validator, DB, Hash, Mail, Illuminate\Support\Facades\Password;
 
+/**
+ * @resource Authentication
+ * Authentication Api Resource
+ */
 class UserController extends Controller
 {
     public $successStatus = 200;
 
     /**
-     * login api
+     * login api.This will return a token that will be added as query param to subsequent api calls
+     * e.g http://oufit.herokuapp.com/api/weather-groups?token={returned_token}
+     * to fetch weather groups
      *
      * @param LoginRequest $request
      * @return \Illuminate\Http\Response
@@ -31,7 +37,7 @@ class UserController extends Controller
 
         try {
             // attempt to verify the credentials and create a token for the user
-            if (! $token = JWTAuth::attempt($credentials)) {
+            if (!$token = JWTAuth::attempt($credentials)) {
                 return response()->json(['error' => 'invalid_credentials'], 401);
             }
         } catch (JWTException $e) {
@@ -44,8 +50,9 @@ class UserController extends Controller
     }
 
     /**
-     * Register api
-     *
+     * Register api.This registers a new user to the app and returns a token that the user can use to access the resources.
+     * e.g http://oufit.herokuapp.com/api/weather-groups?token={returned token}
+     * to fetch weather groups
      * @param RegisterRequest $request
      * @return \Illuminate\Http\Response
      */
@@ -56,7 +63,21 @@ class UserController extends Controller
         $email = $request->email;
         $password = $request->password;
         User::create(['name' => $name, 'email' => $email, 'password' => Hash::make($password)]);
-        return response()->json(['success' => 'Registered successfully now login'], $this->successStatus);
+        // grab credentials from the request
+        $credentials = $request->only('email', 'password');
+
+        try {
+            // attempt to verify the credentials and create a token for the user
+            if (!$token = JWTAuth::attempt($credentials)) {
+                return response()->json(['error' => 'invalid_credentials'], 401);
+            }
+        } catch (JWTException $e) {
+            // something went wrong whilst attempting to encode the token
+            return response()->json(['error' => 'could_not_create_token'], 500);
+        }
+
+        // all good so return the token
+        return response()->json(compact('token'));
     }
 
     /**

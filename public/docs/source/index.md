@@ -19,6 +19,108 @@ Welcome to the generated API reference.
 [Get Postman Collection](http://oufit.herokuapp.com/docs/collection.json)
 <!-- END_INFO -->
 
+#Authentication
+Authentication Api Resource
+<!-- START_c3fa189a6c95ca36ad6ac4791a873d23 -->
+## login api.This will return a token that will be added as query param to subsequent api calls
+e.g http://oufit.herokuapp.com/api/weather-groups?token={returned_token}
+to fetch weather groups
+
+> Example request:
+
+```bash
+curl -X POST "http://oufit.herokuapp.com/api/login" \
+-H "Accept: application/json" \
+    -d "email"="uzieme@example.org" \
+    -d "password"="rerum" \
+
+```
+
+```javascript
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://oufit.herokuapp.com/api/login",
+    "method": "POST",
+    "data": {
+        "email": "uzieme@example.org",
+        "password": "rerum"
+},
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});
+```
+
+
+### HTTP Request
+`POST api/login`
+
+#### Parameters
+
+Parameter | Type | Status | Description
+--------- | ------- | ------- | ------- | -----------
+    email | email |  required  | 
+    password | string |  required  | 
+
+<!-- END_c3fa189a6c95ca36ad6ac4791a873d23 -->
+
+<!-- START_d7b7952e7fdddc07c978c9bdaf757acf -->
+## Register api.This registers a new user to the app and returns a token that the user can use to access the resources.
+
+e.g http://oufit.herokuapp.com/api/weather-groups?token={returned token}
+to fetch weather groups
+
+> Example request:
+
+```bash
+curl -X POST "http://oufit.herokuapp.com/api/register" \
+-H "Accept: application/json" \
+    -d "name"="et" \
+    -d "email"="milo77@example.org" \
+    -d "password"="et" \
+
+```
+
+```javascript
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://oufit.herokuapp.com/api/register",
+    "method": "POST",
+    "data": {
+        "name": "et",
+        "email": "milo77@example.org",
+        "password": "et"
+},
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});
+```
+
+
+### HTTP Request
+`POST api/register`
+
+#### Parameters
+
+Parameter | Type | Status | Description
+--------- | ------- | ------- | ------- | -----------
+    name | string |  required  | 
+    email | email |  required  | 
+    password | string |  required  | 
+
+<!-- END_d7b7952e7fdddc07c978c9bdaf757acf -->
+
 #Dress Codes
 Dress Code Api Resource
 <!-- START_e58560675c9fdf08730f76352d6075a1 -->
@@ -265,6 +367,221 @@ null
 
 <!-- END_d24fdd4349f20e6a5014120d7f04006f -->
 
+#Outfits
+Outfits Api Resource
+<!-- START_655c8be18583834e62d5aa89aab0bfb6 -->
+## returns a list of all outfits by the logged in user.
+
+> Example request:
+
+```bash
+curl -X GET "http://oufit.herokuapp.com/api/outfits" \
+-H "Accept: application/json"
+```
+
+```javascript
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://oufit.herokuapp.com/api/outfits",
+    "method": "GET",
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});
+```
+
+> Example response:
+
+```json
+null
+```
+
+### HTTP Request
+`GET api/outfits`
+
+`HEAD api/outfits`
+
+
+<!-- END_655c8be18583834e62d5aa89aab0bfb6 -->
+
+<!-- START_53df37f9d63713a9a2cb4ea863657ab5 -->
+## Add new outfit by the logged in user
+
+> Example request:
+
+```bash
+curl -X POST "http://oufit.herokuapp.com/api/outfits" \
+-H "Accept: application/json" \
+    -d "name"="consectetur" \
+    -d "photo_url"="http://legros.com/" \
+    -d "outfit_category_id"="consectetur" \
+
+```
+
+```javascript
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://oufit.herokuapp.com/api/outfits",
+    "method": "POST",
+    "data": {
+        "name": "consectetur",
+        "photo_url": "http:\/\/legros.com\/",
+        "outfit_category_id": "consectetur"
+},
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});
+```
+
+
+### HTTP Request
+`POST api/outfits`
+
+#### Parameters
+
+Parameter | Type | Status | Description
+--------- | ------- | ------- | ------- | -----------
+    name | string |  required  | 
+    photo_url | url |  required  | 
+    outfit_category_id | string |  required  | 
+
+<!-- END_53df37f9d63713a9a2cb4ea863657ab5 -->
+
+<!-- START_09c47a3a7022ef11b7cc7aa5050ce340 -->
+## Display the specified resource.
+
+> Example request:
+
+```bash
+curl -X GET "http://oufit.herokuapp.com/api/outfits/{outfit}" \
+-H "Accept: application/json"
+```
+
+```javascript
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://oufit.herokuapp.com/api/outfits/{outfit}",
+    "method": "GET",
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});
+```
+
+> Example response:
+
+```json
+null
+```
+
+### HTTP Request
+`GET api/outfits/{outfit}`
+
+`HEAD api/outfits/{outfit}`
+
+
+<!-- END_09c47a3a7022ef11b7cc7aa5050ce340 -->
+
+<!-- START_8508f326f01ae2f614518b83258dd599 -->
+## Update an outfit by the user.
+
+> Example request:
+
+```bash
+curl -X PUT "http://oufit.herokuapp.com/api/outfits/{outfit}" \
+-H "Accept: application/json" \
+    -d "name"="eaque" \
+    -d "photo_url"="http://www.johnston.com/" \
+    -d "outfit_category_id"="eaque" \
+
+```
+
+```javascript
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://oufit.herokuapp.com/api/outfits/{outfit}",
+    "method": "PUT",
+    "data": {
+        "name": "eaque",
+        "photo_url": "http:\/\/www.johnston.com\/",
+        "outfit_category_id": "eaque"
+},
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});
+```
+
+
+### HTTP Request
+`PUT api/outfits/{outfit}`
+
+`PATCH api/outfits/{outfit}`
+
+#### Parameters
+
+Parameter | Type | Status | Description
+--------- | ------- | ------- | ------- | -----------
+    name | string |  required  | 
+    photo_url | url |  required  | 
+    outfit_category_id | string |  required  | 
+
+<!-- END_8508f326f01ae2f614518b83258dd599 -->
+
+<!-- START_6bd3206374b256d9575a67180f788f61 -->
+## Remove a user outfit.
+
+> Example request:
+
+```bash
+curl -X DELETE "http://oufit.herokuapp.com/api/outfits/{outfit}" \
+-H "Accept: application/json"
+```
+
+```javascript
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://oufit.herokuapp.com/api/outfits/{outfit}",
+    "method": "DELETE",
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});
+```
+
+
+### HTTP Request
+`DELETE api/outfits/{outfit}`
+
+
+<!-- END_6bd3206374b256d9575a67180f788f61 -->
+
 #WeatherGroups
 Weather Groups Api Resource
 <!-- START_40a1e4796345e29908a5a9580142e7d0 -->
@@ -346,100 +663,4 @@ null
 
 
 <!-- END_db23914d5df1afe92c1ad7984b017ec5 -->
-
-#general
-<!-- START_c3fa189a6c95ca36ad6ac4791a873d23 -->
-## login api
-
-> Example request:
-
-```bash
-curl -X POST "http://oufit.herokuapp.com/api/login" \
--H "Accept: application/json" \
-    -d "email"="uzieme@example.org" \
-    -d "password"="rerum" \
-
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://oufit.herokuapp.com/api/login",
-    "method": "POST",
-    "data": {
-        "email": "uzieme@example.org",
-        "password": "rerum"
-},
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-
-### HTTP Request
-`POST api/login`
-
-#### Parameters
-
-Parameter | Type | Status | Description
---------- | ------- | ------- | ------- | -----------
-    email | email |  required  | 
-    password | string |  required  | 
-
-<!-- END_c3fa189a6c95ca36ad6ac4791a873d23 -->
-
-<!-- START_d7b7952e7fdddc07c978c9bdaf757acf -->
-## Register api
-
-> Example request:
-
-```bash
-curl -X POST "http://oufit.herokuapp.com/api/register" \
--H "Accept: application/json" \
-    -d "name"="et" \
-    -d "email"="milo77@example.org" \
-    -d "password"="et" \
-
-```
-
-```javascript
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://oufit.herokuapp.com/api/register",
-    "method": "POST",
-    "data": {
-        "name": "et",
-        "email": "milo77@example.org",
-        "password": "et"
-},
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});
-```
-
-
-### HTTP Request
-`POST api/register`
-
-#### Parameters
-
-Parameter | Type | Status | Description
---------- | ------- | ------- | ------- | -----------
-    name | string |  required  | 
-    email | email |  required  | 
-    password | string |  required  | 
-
-<!-- END_d7b7952e7fdddc07c978c9bdaf757acf -->
 

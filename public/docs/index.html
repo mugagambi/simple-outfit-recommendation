@@ -48,6 +48,125 @@
 <p>Welcome to the generated API reference.
 <a href="http://oufit.herokuapp.com/docs/collection.json">Get Postman Collection</a></p>
 <!-- END_INFO -->
+<h1>Authentication</h1>
+<p>Authentication Api Resource</p>
+<!-- START_c3fa189a6c95ca36ad6ac4791a873d23 -->
+<h2>login api.This will return a token that will be added as query param to subsequent api calls</h2>
+<p>e.g <a href="http://oufit.herokuapp.com/api/weather-groups?token={returned_token">http://oufit.herokuapp.com/api/weather-groups?token={returned_token</a>}
+to fetch weather groups</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST "http://oufit.herokuapp.com/api/login" \
+-H "Accept: application/json" \
+    -d "email"="uzieme@example.org" \
+    -d "password"="rerum" \
+</code></pre>
+<pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://oufit.herokuapp.com/api/login",
+    "method": "POST",
+    "data": {
+        "email": "uzieme@example.org",
+        "password": "rerum"
+},
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/login</code></p>
+<h4>Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>email</td>
+<td>email</td>
+<td>required</td>
+</tr>
+<tr>
+<td>password</td>
+<td>string</td>
+<td>required</td>
+</tr>
+</tbody>
+</table>
+<!-- END_c3fa189a6c95ca36ad6ac4791a873d23 -->
+<!-- START_d7b7952e7fdddc07c978c9bdaf757acf -->
+<h2>Register api.This registers a new user to the app and returns a token that the user can use to access the resources.</h2>
+<p>e.g <a href="http://oufit.herokuapp.com/api/weather-groups?token={returned">http://oufit.herokuapp.com/api/weather-groups?token={returned</a> token}
+to fetch weather groups</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST "http://oufit.herokuapp.com/api/register" \
+-H "Accept: application/json" \
+    -d "name"="et" \
+    -d "email"="milo77@example.org" \
+    -d "password"="et" \
+</code></pre>
+<pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://oufit.herokuapp.com/api/register",
+    "method": "POST",
+    "data": {
+        "name": "et",
+        "email": "milo77@example.org",
+        "password": "et"
+},
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/register</code></p>
+<h4>Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>required</td>
+</tr>
+<tr>
+<td>email</td>
+<td>email</td>
+<td>required</td>
+</tr>
+<tr>
+<td>password</td>
+<td>string</td>
+<td>required</td>
+</tr>
+</tbody>
+</table>
+<!-- END_d7b7952e7fdddc07c978c9bdaf757acf -->
 <h1>Dress Codes</h1>
 <p>Dress Code Api Resource</p>
 <!-- START_e58560675c9fdf08730f76352d6075a1 -->
@@ -222,6 +341,208 @@ $.ajax(settings).done(function (response) {
 <p><code>GET api/outfit-categories/{id}</code></p>
 <p><code>HEAD api/outfit-categories/{id}</code></p>
 <!-- END_d24fdd4349f20e6a5014120d7f04006f -->
+<h1>Outfits</h1>
+<p>Outfits Api Resource</p>
+<!-- START_655c8be18583834e62d5aa89aab0bfb6 -->
+<h2>returns a list of all outfits by the logged in user.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET "http://oufit.herokuapp.com/api/outfits" \
+-H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://oufit.herokuapp.com/api/outfits",
+    "method": "GET",
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+<blockquote>
+<p>Example response:</p>
+</blockquote>
+<pre><code class="language-json">null</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/outfits</code></p>
+<p><code>HEAD api/outfits</code></p>
+<!-- END_655c8be18583834e62d5aa89aab0bfb6 -->
+<!-- START_53df37f9d63713a9a2cb4ea863657ab5 -->
+<h2>Add new outfit by the logged in user</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST "http://oufit.herokuapp.com/api/outfits" \
+-H "Accept: application/json" \
+    -d "name"="consectetur" \
+    -d "photo_url"="http://legros.com/" \
+    -d "outfit_category_id"="consectetur" \
+</code></pre>
+<pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://oufit.herokuapp.com/api/outfits",
+    "method": "POST",
+    "data": {
+        "name": "consectetur",
+        "photo_url": "http:\/\/legros.com\/",
+        "outfit_category_id": "consectetur"
+},
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+<h3>HTTP Request</h3>
+<p><code>POST api/outfits</code></p>
+<h4>Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>required</td>
+</tr>
+<tr>
+<td>photo_url</td>
+<td>url</td>
+<td>required</td>
+</tr>
+<tr>
+<td>outfit_category_id</td>
+<td>string</td>
+<td>required</td>
+</tr>
+</tbody>
+</table>
+<!-- END_53df37f9d63713a9a2cb4ea863657ab5 -->
+<!-- START_09c47a3a7022ef11b7cc7aa5050ce340 -->
+<h2>Display the specified resource.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET "http://oufit.herokuapp.com/api/outfits/{outfit}" \
+-H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://oufit.herokuapp.com/api/outfits/{outfit}",
+    "method": "GET",
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+<blockquote>
+<p>Example response:</p>
+</blockquote>
+<pre><code class="language-json">null</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/outfits/{outfit}</code></p>
+<p><code>HEAD api/outfits/{outfit}</code></p>
+<!-- END_09c47a3a7022ef11b7cc7aa5050ce340 -->
+<!-- START_8508f326f01ae2f614518b83258dd599 -->
+<h2>Update an outfit by the user.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X PUT "http://oufit.herokuapp.com/api/outfits/{outfit}" \
+-H "Accept: application/json" \
+    -d "name"="eaque" \
+    -d "photo_url"="http://www.johnston.com/" \
+    -d "outfit_category_id"="eaque" \
+</code></pre>
+<pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://oufit.herokuapp.com/api/outfits/{outfit}",
+    "method": "PUT",
+    "data": {
+        "name": "eaque",
+        "photo_url": "http:\/\/www.johnston.com\/",
+        "outfit_category_id": "eaque"
+},
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+<h3>HTTP Request</h3>
+<p><code>PUT api/outfits/{outfit}</code></p>
+<p><code>PATCH api/outfits/{outfit}</code></p>
+<h4>Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>required</td>
+</tr>
+<tr>
+<td>photo_url</td>
+<td>url</td>
+<td>required</td>
+</tr>
+<tr>
+<td>outfit_category_id</td>
+<td>string</td>
+<td>required</td>
+</tr>
+</tbody>
+</table>
+<!-- END_8508f326f01ae2f614518b83258dd599 -->
+<!-- START_6bd3206374b256d9575a67180f788f61 -->
+<h2>Remove a user outfit.</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X DELETE "http://oufit.herokuapp.com/api/outfits/{outfit}" \
+-H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://oufit.herokuapp.com/api/outfits/{outfit}",
+    "method": "DELETE",
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+<h3>HTTP Request</h3>
+<p><code>DELETE api/outfits/{outfit}</code></p>
+<!-- END_6bd3206374b256d9575a67180f788f61 -->
 <h1>WeatherGroups</h1>
 <p>Weather Groups Api Resource</p>
 <!-- START_40a1e4796345e29908a5a9580142e7d0 -->
@@ -280,120 +601,6 @@ $.ajax(settings).done(function (response) {
 <p><code>GET api/weather-groups/{id}</code></p>
 <p><code>HEAD api/weather-groups/{id}</code></p>
 <!-- END_db23914d5df1afe92c1ad7984b017ec5 -->
-<h1>general</h1>
-<!-- START_c3fa189a6c95ca36ad6ac4791a873d23 -->
-<h2>login api</h2>
-<blockquote>
-<p>Example request:</p>
-</blockquote>
-<pre><code class="language-bash">curl -X POST "http://oufit.herokuapp.com/api/login" \
--H "Accept: application/json" \
-    -d "email"="uzieme@example.org" \
-    -d "password"="rerum" \
-</code></pre>
-<pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://oufit.herokuapp.com/api/login",
-    "method": "POST",
-    "data": {
-        "email": "uzieme@example.org",
-        "password": "rerum"
-},
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-<h3>HTTP Request</h3>
-<p><code>POST api/login</code></p>
-<h4>Parameters</h4>
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Status</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>email</td>
-<td>email</td>
-<td>required</td>
-</tr>
-<tr>
-<td>password</td>
-<td>string</td>
-<td>required</td>
-</tr>
-</tbody>
-</table>
-<!-- END_c3fa189a6c95ca36ad6ac4791a873d23 -->
-<!-- START_d7b7952e7fdddc07c978c9bdaf757acf -->
-<h2>Register api</h2>
-<blockquote>
-<p>Example request:</p>
-</blockquote>
-<pre><code class="language-bash">curl -X POST "http://oufit.herokuapp.com/api/register" \
--H "Accept: application/json" \
-    -d "name"="et" \
-    -d "email"="milo77@example.org" \
-    -d "password"="et" \
-</code></pre>
-<pre><code class="language-javascript">var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "http://oufit.herokuapp.com/api/register",
-    "method": "POST",
-    "data": {
-        "name": "et",
-        "email": "milo77@example.org",
-        "password": "et"
-},
-    "headers": {
-        "accept": "application/json"
-    }
-}
-
-$.ajax(settings).done(function (response) {
-    console.log(response);
-});</code></pre>
-<h3>HTTP Request</h3>
-<p><code>POST api/register</code></p>
-<h4>Parameters</h4>
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Status</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>name</td>
-<td>string</td>
-<td>required</td>
-</tr>
-<tr>
-<td>email</td>
-<td>email</td>
-<td>required</td>
-</tr>
-<tr>
-<td>password</td>
-<td>string</td>
-<td>required</td>
-</tr>
-</tbody>
-</table>
-<!-- END_d7b7952e7fdddc07c978c9bdaf757acf -->
       </div>
       <div class="dark-box">
                         <div class="lang-selector">

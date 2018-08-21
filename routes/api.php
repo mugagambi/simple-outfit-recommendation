@@ -26,4 +26,5 @@ Route::middleware(['jwt.auth'])->group(function () {
     Route::get('/dresscodes/{id}', 'Api\DressCodeController@show');
     Route::get('/outfit-categories', 'Api\OutfitCategoryController@index');
     Route::get('/outfit-categories/{id}', 'Api\OutfitCategoryController@show');
+    Route::apiResource('outfits', 'Api\OutfitController');
 });
