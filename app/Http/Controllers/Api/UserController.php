@@ -62,7 +62,9 @@ class UserController extends Controller
         $name = $request->name;
         $email = $request->email;
         $password = $request->password;
-        User::create(['name' => $name, 'email' => $email, 'password' => Hash::make($password)]);
+        $phone_number = $request->phone_number;
+        User::create(['name' => $name, 'email' => $email, 'password' => Hash::make($password),
+            'phone_number' => $phone_number]);
         // grab credentials from the request
         $credentials = $request->only('email', 'password');
 

@@ -83,6 +83,7 @@ curl -X POST "http://oufit.herokuapp.com/api/register" \
     -d "name"="et" \
     -d "email"="milo77@example.org" \
     -d "password"="et" \
+    -d "phone_number"="et" \
 
 ```
 
@@ -95,7 +96,8 @@ var settings = {
     "data": {
         "name": "et",
         "email": "milo77@example.org",
-        "password": "et"
+        "password": "et",
+        "phone_number": "et"
 },
     "headers": {
         "accept": "application/json"
@@ -118,6 +120,7 @@ Parameter | Type | Status | Description
     name | string |  required  | 
     email | email |  required  | 
     password | string |  required  | 
+    phone_number | string |  optional  | 
 
 <!-- END_d7b7952e7fdddc07c978c9bdaf757acf -->
 
