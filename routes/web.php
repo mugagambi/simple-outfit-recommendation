@@ -26,3 +26,6 @@ Route::resource('dress-code', 'DressModeController')->middleware('auth')
     ->except(['show']);
 Route::resource('outfit-categories', 'OutfitCategoryController')->middleware('auth')
     ->except(['show']);
+
+Route::get('/broadcast-sms', 'BroadCastSmsController@show_form')->name('show_broadcast_form');
+Route::post('/broadcast-sms', 'BroadCastSmsController@send_sms')->name('send_sms');
