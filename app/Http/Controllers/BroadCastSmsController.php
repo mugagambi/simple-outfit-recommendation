@@ -31,7 +31,7 @@ class BroadCastSmsController extends Controller
         $AT = new AfricasTalking($username, $apiKey);
         $SMS = $AT->sms();
         $SMS->send(['message' => $message, 'to' => $phone_numbers, 'enqueue' => true]);
-        flash('sms sent successfully.Chech your Africa\'s  Talking dashboard for delivery receipts')->success();
+        flash('sms sent successfully.Check your Africa\'s  Talking dashboard for delivery receipts')->success();
         return redirect()->route('show_broadcast_form');
     }
 }
