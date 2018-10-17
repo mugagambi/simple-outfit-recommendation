@@ -26,7 +26,8 @@ class OutfitRequest extends FormRequest
         return [
             'name' => 'required',
             'photo_url' => 'required|url',
-            'outfit_category_id' => 'required'
+            'outfit_category_id' => 'required',
+            'weather_group_id' => 'required'
         ];
     }
 }

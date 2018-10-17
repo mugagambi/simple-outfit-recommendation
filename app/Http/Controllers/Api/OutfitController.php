@@ -6,6 +6,7 @@ use App\Http\Requests\OutfitRequest;
 use App\Http\Resources\OutfitCollection;
 use App\Http\Resources\OutfitResource;
 use App\Outfit;
+use App\WeatherGroup;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
@@ -27,6 +28,20 @@ class OutfitController extends Controller
     }
 
     /**
+     * returns a list of outfits by the logged in user given a weather group.
+     *
+     * @param $weather_id
+     * @return OutfitCollection
+     */
+    public function by_weather($weather_id)
+    {
+
+        return new OutfitCollection(Outfit::where('user_id', Auth::User()->id)
+            ->where('weathe_group_id', $weather_id)->paginate(20));
+    }
+
+
+    /**
      * Add new outfit by the logged in user
      *
      * @param OutfitRequest $request
@@ -38,7 +53,8 @@ class OutfitController extends Controller
             'name' => $request->input('name'),
             'photo_url' => $request->input('photo_url'),
             'outfit_category_id' => $request->input('outfit_category_id'),
-            'user_id' => Auth::user()->id
+            'user_id' => Auth::user()->id,
+            'weathe_group_id' => $request->input('weather_group_id')
         ]);
         return new OutfitResource($outfit);
     }
@@ -67,6 +83,7 @@ class OutfitController extends Controller
         $outfit->name = $request->input('name');
         $outfit->photo_url = $request->input('photo_url');
         $outfit->outfit_category_id = $request->input('outfit_category_id');
+        $outfit->weathe_group_id = $request->input('weather_group_id');
         $outfit->save();
         return new OutfitResource($outfit);
     }

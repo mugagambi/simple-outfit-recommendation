@@ -16,7 +16,7 @@ toc_footers:
 # Info
 
 Welcome to the generated API reference.
-[Get Postman Collection](http://oufit.herokuapp.com/docs/collection.json)
+[Get Postman Collection](http://localhost/docs/collection.json)
 <!-- END_INFO -->
 
 #Authentication
@@ -29,7 +29,7 @@ to fetch weather groups
 > Example request:
 
 ```bash
-curl -X POST "http://oufit.herokuapp.com/api/login" \
+curl -X POST "http://localhost/api/login" \
 -H "Accept: application/json" \
     -d "email"="uzieme@example.org" \
     -d "password"="rerum" \
@@ -40,7 +40,7 @@ curl -X POST "http://oufit.herokuapp.com/api/login" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://oufit.herokuapp.com/api/login",
+    "url": "http://localhost/api/login",
     "method": "POST",
     "data": {
         "email": "uzieme@example.org",
@@ -78,7 +78,7 @@ to fetch weather groups
 > Example request:
 
 ```bash
-curl -X POST "http://oufit.herokuapp.com/api/register" \
+curl -X POST "http://localhost/api/register" \
 -H "Accept: application/json" \
     -d "name"="et" \
     -d "email"="milo77@example.org" \
@@ -91,7 +91,7 @@ curl -X POST "http://oufit.herokuapp.com/api/register" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://oufit.herokuapp.com/api/register",
+    "url": "http://localhost/api/register",
     "method": "POST",
     "data": {
         "name": "et",
@@ -132,7 +132,7 @@ Dress Code Api Resource
 > Example request:
 
 ```bash
-curl -X GET "http://oufit.herokuapp.com/api/dresscodes" \
+curl -X GET "http://localhost/api/dresscodes" \
 -H "Accept: application/json"
 ```
 
@@ -140,7 +140,7 @@ curl -X GET "http://oufit.herokuapp.com/api/dresscodes" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://oufit.herokuapp.com/api/dresscodes",
+    "url": "http://localhost/api/dresscodes",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -172,7 +172,7 @@ null
 > Example request:
 
 ```bash
-curl -X GET "http://oufit.herokuapp.com/api/dresscodes/{id}" \
+curl -X GET "http://localhost/api/dresscodes/{id}" \
 -H "Accept: application/json"
 ```
 
@@ -180,7 +180,7 @@ curl -X GET "http://oufit.herokuapp.com/api/dresscodes/{id}" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://oufit.herokuapp.com/api/dresscodes/{id}",
+    "url": "http://localhost/api/dresscodes/{id}",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -214,7 +214,7 @@ Events api resource
 > Example request:
 
 ```bash
-curl -X GET "http://oufit.herokuapp.com/api/events" \
+curl -X GET "http://localhost/api/events" \
 -H "Accept: application/json"
 ```
 
@@ -222,7 +222,7 @@ curl -X GET "http://oufit.herokuapp.com/api/events" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://oufit.herokuapp.com/api/events",
+    "url": "http://localhost/api/events",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -254,7 +254,7 @@ null
 > Example request:
 
 ```bash
-curl -X GET "http://oufit.herokuapp.com/api/events/{id}" \
+curl -X GET "http://localhost/api/events/{id}" \
 -H "Accept: application/json"
 ```
 
@@ -262,7 +262,7 @@ curl -X GET "http://oufit.herokuapp.com/api/events/{id}" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://oufit.herokuapp.com/api/events/{id}",
+    "url": "http://localhost/api/events/{id}",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -296,7 +296,7 @@ outfit categories api resource
 > Example request:
 
 ```bash
-curl -X GET "http://oufit.herokuapp.com/api/outfit-categories" \
+curl -X GET "http://localhost/api/outfit-categories" \
 -H "Accept: application/json"
 ```
 
@@ -304,7 +304,7 @@ curl -X GET "http://oufit.herokuapp.com/api/outfit-categories" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://oufit.herokuapp.com/api/outfit-categories",
+    "url": "http://localhost/api/outfit-categories",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -336,7 +336,7 @@ null
 > Example request:
 
 ```bash
-curl -X GET "http://oufit.herokuapp.com/api/outfit-categories/{id}" \
+curl -X GET "http://localhost/api/outfit-categories/{id}" \
 -H "Accept: application/json"
 ```
 
@@ -344,7 +344,7 @@ curl -X GET "http://oufit.herokuapp.com/api/outfit-categories/{id}" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://oufit.herokuapp.com/api/outfit-categories/{id}",
+    "url": "http://localhost/api/outfit-categories/{id}",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -378,7 +378,7 @@ Outfits Api Resource
 > Example request:
 
 ```bash
-curl -X GET "http://oufit.herokuapp.com/api/outfits" \
+curl -X GET "http://localhost/api/outfits" \
 -H "Accept: application/json"
 ```
 
@@ -386,7 +386,7 @@ curl -X GET "http://oufit.herokuapp.com/api/outfits" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://oufit.herokuapp.com/api/outfits",
+    "url": "http://localhost/api/outfits",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -418,11 +418,12 @@ null
 > Example request:
 
 ```bash
-curl -X POST "http://oufit.herokuapp.com/api/outfits" \
+curl -X POST "http://localhost/api/outfits" \
 -H "Accept: application/json" \
     -d "name"="consectetur" \
     -d "photo_url"="http://legros.com/" \
     -d "outfit_category_id"="consectetur" \
+    -d "weather_group_id"="consectetur" \
 
 ```
 
@@ -430,12 +431,13 @@ curl -X POST "http://oufit.herokuapp.com/api/outfits" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://oufit.herokuapp.com/api/outfits",
+    "url": "http://localhost/api/outfits",
     "method": "POST",
     "data": {
         "name": "consectetur",
         "photo_url": "http:\/\/legros.com\/",
-        "outfit_category_id": "consectetur"
+        "outfit_category_id": "consectetur",
+        "weather_group_id": "consectetur"
 },
     "headers": {
         "accept": "application/json"
@@ -458,6 +460,7 @@ Parameter | Type | Status | Description
     name | string |  required  | 
     photo_url | url |  required  | 
     outfit_category_id | string |  required  | 
+    weather_group_id | string |  required  | 
 
 <!-- END_53df37f9d63713a9a2cb4ea863657ab5 -->
 
@@ -467,7 +470,7 @@ Parameter | Type | Status | Description
 > Example request:
 
 ```bash
-curl -X GET "http://oufit.herokuapp.com/api/outfits/{outfit}" \
+curl -X GET "http://localhost/api/outfits/{outfit}" \
 -H "Accept: application/json"
 ```
 
@@ -475,7 +478,7 @@ curl -X GET "http://oufit.herokuapp.com/api/outfits/{outfit}" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://oufit.herokuapp.com/api/outfits/{outfit}",
+    "url": "http://localhost/api/outfits/{outfit}",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -507,11 +510,12 @@ null
 > Example request:
 
 ```bash
-curl -X PUT "http://oufit.herokuapp.com/api/outfits/{outfit}" \
+curl -X PUT "http://localhost/api/outfits/{outfit}" \
 -H "Accept: application/json" \
     -d "name"="eaque" \
     -d "photo_url"="http://www.johnston.com/" \
     -d "outfit_category_id"="eaque" \
+    -d "weather_group_id"="eaque" \
 
 ```
 
@@ -519,12 +523,13 @@ curl -X PUT "http://oufit.herokuapp.com/api/outfits/{outfit}" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://oufit.herokuapp.com/api/outfits/{outfit}",
+    "url": "http://localhost/api/outfits/{outfit}",
     "method": "PUT",
     "data": {
         "name": "eaque",
         "photo_url": "http:\/\/www.johnston.com\/",
-        "outfit_category_id": "eaque"
+        "outfit_category_id": "eaque",
+        "weather_group_id": "eaque"
 },
     "headers": {
         "accept": "application/json"
@@ -549,6 +554,7 @@ Parameter | Type | Status | Description
     name | string |  required  | 
     photo_url | url |  required  | 
     outfit_category_id | string |  required  | 
+    weather_group_id | string |  required  | 
 
 <!-- END_8508f326f01ae2f614518b83258dd599 -->
 
@@ -558,7 +564,7 @@ Parameter | Type | Status | Description
 > Example request:
 
 ```bash
-curl -X DELETE "http://oufit.herokuapp.com/api/outfits/{outfit}" \
+curl -X DELETE "http://localhost/api/outfits/{outfit}" \
 -H "Accept: application/json"
 ```
 
@@ -566,7 +572,7 @@ curl -X DELETE "http://oufit.herokuapp.com/api/outfits/{outfit}" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://oufit.herokuapp.com/api/outfits/{outfit}",
+    "url": "http://localhost/api/outfits/{outfit}",
     "method": "DELETE",
     "headers": {
         "accept": "application/json"
@@ -585,6 +591,46 @@ $.ajax(settings).done(function (response) {
 
 <!-- END_6bd3206374b256d9575a67180f788f61 -->
 
+<!-- START_fdcf10fee04cff5ade2246c3b66237a8 -->
+## returns a list of outfits by the logged in user given a weather group.
+
+> Example request:
+
+```bash
+curl -X GET "http://localhost/api/outfits/{weather_id}" \
+-H "Accept: application/json"
+```
+
+```javascript
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://localhost/api/outfits/{weather_id}",
+    "method": "GET",
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});
+```
+
+> Example response:
+
+```json
+null
+```
+
+### HTTP Request
+`GET api/outfits/{weather_id}`
+
+`HEAD api/outfits/{weather_id}`
+
+
+<!-- END_fdcf10fee04cff5ade2246c3b66237a8 -->
+
 #WeatherGroups
 Weather Groups Api Resource
 <!-- START_40a1e4796345e29908a5a9580142e7d0 -->
@@ -593,7 +639,7 @@ Weather Groups Api Resource
 > Example request:
 
 ```bash
-curl -X GET "http://oufit.herokuapp.com/api/weather-groups" \
+curl -X GET "http://localhost/api/weather-groups" \
 -H "Accept: application/json"
 ```
 
@@ -601,7 +647,7 @@ curl -X GET "http://oufit.herokuapp.com/api/weather-groups" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://oufit.herokuapp.com/api/weather-groups",
+    "url": "http://localhost/api/weather-groups",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -633,7 +679,7 @@ null
 > Example request:
 
 ```bash
-curl -X GET "http://oufit.herokuapp.com/api/weather-groups/{id}" \
+curl -X GET "http://localhost/api/weather-groups/{id}" \
 -H "Accept: application/json"
 ```
 
@@ -641,7 +687,7 @@ curl -X GET "http://oufit.herokuapp.com/api/weather-groups/{id}" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://oufit.herokuapp.com/api/weather-groups/{id}",
+    "url": "http://localhost/api/weather-groups/{id}",
     "method": "GET",
     "headers": {
         "accept": "application/json"
