@@ -1,7 +1,7 @@
 <?php
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.6.33 on 2018-09-09 08:30:04.
+ * Generated for Laravel 5.6.33 on 2018-10-17 13:36:54.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -1805,7 +1805,7 @@ namespace Illuminate\Support\Facades {
         }
         
         /**
-ide-helper:generate         * Determine if the user was authenticated via "remember me" cookie.
+         * Determine if the user was authenticated via "remember me" cookie.
          *
          * @return bool 
          * @static 
@@ -3505,25 +3505,12 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         /**
          * Get a schema builder instance for the connection.
          *
-         * @return \Illuminate\Database\Schema\MySqlBuilder 
+         * @return \Illuminate\Database\Schema\PostgresBuilder 
          * @static 
          */ 
         public static function getSchemaBuilder()
         {
-            return \Illuminate\Database\MySqlConnection::getSchemaBuilder();
-        }
-        
-        /**
-         * Bind values to their parameters in the given statement.
-         *
-         * @param \PDOStatement $statement
-         * @param array $bindings
-         * @return void 
-         * @static 
-         */ 
-        public static function bindValues($statement, $bindings)
-        {
-            \Illuminate\Database\MySqlConnection::bindValues($statement, $bindings);
+            return \Illuminate\Database\PostgresConnection::getSchemaBuilder();
         }
         
         /**
@@ -3535,7 +3522,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function useDefaultQueryGrammar()
         {
             //Method inherited from \Illuminate\Database\Connection            
-            \Illuminate\Database\MySqlConnection::useDefaultQueryGrammar();
+            \Illuminate\Database\PostgresConnection::useDefaultQueryGrammar();
         }
         
         /**
@@ -3547,7 +3534,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function useDefaultSchemaGrammar()
         {
             //Method inherited from \Illuminate\Database\Connection            
-            \Illuminate\Database\MySqlConnection::useDefaultSchemaGrammar();
+            \Illuminate\Database\PostgresConnection::useDefaultSchemaGrammar();
         }
         
         /**
@@ -3559,7 +3546,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function useDefaultPostProcessor()
         {
             //Method inherited from \Illuminate\Database\Connection            
-            \Illuminate\Database\MySqlConnection::useDefaultPostProcessor();
+            \Illuminate\Database\PostgresConnection::useDefaultPostProcessor();
         }
         
         /**
@@ -3572,7 +3559,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function table($table)
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::table($table);
+            return \Illuminate\Database\PostgresConnection::table($table);
         }
         
         /**
@@ -3584,7 +3571,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function query()
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::query();
+            return \Illuminate\Database\PostgresConnection::query();
         }
         
         /**
@@ -3599,7 +3586,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function selectOne($query, $bindings = array(), $useReadPdo = true)
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::selectOne($query, $bindings, $useReadPdo);
+            return \Illuminate\Database\PostgresConnection::selectOne($query, $bindings, $useReadPdo);
         }
         
         /**
@@ -3613,7 +3600,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function selectFromWriteConnection($query, $bindings = array())
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::selectFromWriteConnection($query, $bindings);
+            return \Illuminate\Database\PostgresConnection::selectFromWriteConnection($query, $bindings);
         }
         
         /**
@@ -3628,7 +3615,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function select($query, $bindings = array(), $useReadPdo = true)
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::select($query, $bindings, $useReadPdo);
+            return \Illuminate\Database\PostgresConnection::select($query, $bindings, $useReadPdo);
         }
         
         /**
@@ -3643,7 +3630,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function cursor($query, $bindings = array(), $useReadPdo = true)
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::cursor($query, $bindings, $useReadPdo);
+            return \Illuminate\Database\PostgresConnection::cursor($query, $bindings, $useReadPdo);
         }
         
         /**
@@ -3657,7 +3644,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function insert($query, $bindings = array())
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::insert($query, $bindings);
+            return \Illuminate\Database\PostgresConnection::insert($query, $bindings);
         }
         
         /**
@@ -3671,7 +3658,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function update($query, $bindings = array())
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::update($query, $bindings);
+            return \Illuminate\Database\PostgresConnection::update($query, $bindings);
         }
         
         /**
@@ -3685,7 +3672,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function delete($query, $bindings = array())
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::delete($query, $bindings);
+            return \Illuminate\Database\PostgresConnection::delete($query, $bindings);
         }
         
         /**
@@ -3699,7 +3686,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function statement($query, $bindings = array())
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::statement($query, $bindings);
+            return \Illuminate\Database\PostgresConnection::statement($query, $bindings);
         }
         
         /**
@@ -3713,7 +3700,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function affectingStatement($query, $bindings = array())
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::affectingStatement($query, $bindings);
+            return \Illuminate\Database\PostgresConnection::affectingStatement($query, $bindings);
         }
         
         /**
@@ -3726,7 +3713,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function unprepared($query)
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::unprepared($query);
+            return \Illuminate\Database\PostgresConnection::unprepared($query);
         }
         
         /**
@@ -3739,7 +3726,21 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function pretend($callback)
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::pretend($callback);
+            return \Illuminate\Database\PostgresConnection::pretend($callback);
+        }
+        
+        /**
+         * Bind values to their parameters in the given statement.
+         *
+         * @param \PDOStatement $statement
+         * @param array $bindings
+         * @return void 
+         * @static 
+         */ 
+        public static function bindValues($statement, $bindings)
+        {
+            //Method inherited from \Illuminate\Database\Connection            
+            \Illuminate\Database\PostgresConnection::bindValues($statement, $bindings);
         }
         
         /**
@@ -3752,7 +3753,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function prepareBindings($bindings)
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::prepareBindings($bindings);
+            return \Illuminate\Database\PostgresConnection::prepareBindings($bindings);
         }
         
         /**
@@ -3767,7 +3768,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function logQuery($query, $bindings, $time = null)
         {
             //Method inherited from \Illuminate\Database\Connection            
-            \Illuminate\Database\MySqlConnection::logQuery($query, $bindings, $time);
+            \Illuminate\Database\PostgresConnection::logQuery($query, $bindings, $time);
         }
         
         /**
@@ -3780,7 +3781,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function listen($callback)
         {
             //Method inherited from \Illuminate\Database\Connection            
-            \Illuminate\Database\MySqlConnection::listen($callback);
+            \Illuminate\Database\PostgresConnection::listen($callback);
         }
         
         /**
@@ -3793,7 +3794,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function raw($value)
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::raw($value);
+            return \Illuminate\Database\PostgresConnection::raw($value);
         }
         
         /**
@@ -3806,7 +3807,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function recordsHaveBeenModified($value = true)
         {
             //Method inherited from \Illuminate\Database\Connection            
-            \Illuminate\Database\MySqlConnection::recordsHaveBeenModified($value);
+            \Illuminate\Database\PostgresConnection::recordsHaveBeenModified($value);
         }
         
         /**
@@ -3818,7 +3819,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function isDoctrineAvailable()
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::isDoctrineAvailable();
+            return \Illuminate\Database\PostgresConnection::isDoctrineAvailable();
         }
         
         /**
@@ -3832,7 +3833,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function getDoctrineColumn($table, $column)
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::getDoctrineColumn($table, $column);
+            return \Illuminate\Database\PostgresConnection::getDoctrineColumn($table, $column);
         }
         
         /**
@@ -3844,7 +3845,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function getDoctrineSchemaManager()
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::getDoctrineSchemaManager();
+            return \Illuminate\Database\PostgresConnection::getDoctrineSchemaManager();
         }
         
         /**
@@ -3856,7 +3857,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function getDoctrineConnection()
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::getDoctrineConnection();
+            return \Illuminate\Database\PostgresConnection::getDoctrineConnection();
         }
         
         /**
@@ -3868,7 +3869,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function getPdo()
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::getPdo();
+            return \Illuminate\Database\PostgresConnection::getPdo();
         }
         
         /**
@@ -3880,7 +3881,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function getReadPdo()
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::getReadPdo();
+            return \Illuminate\Database\PostgresConnection::getReadPdo();
         }
         
         /**
@@ -3893,7 +3894,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function setPdo($pdo)
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::setPdo($pdo);
+            return \Illuminate\Database\PostgresConnection::setPdo($pdo);
         }
         
         /**
@@ -3906,7 +3907,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function setReadPdo($pdo)
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::setReadPdo($pdo);
+            return \Illuminate\Database\PostgresConnection::setReadPdo($pdo);
         }
         
         /**
@@ -3919,7 +3920,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function setReconnector($reconnector)
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::setReconnector($reconnector);
+            return \Illuminate\Database\PostgresConnection::setReconnector($reconnector);
         }
         
         /**
@@ -3931,7 +3932,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function getName()
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::getName();
+            return \Illuminate\Database\PostgresConnection::getName();
         }
         
         /**
@@ -3944,7 +3945,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function getConfig($option = null)
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::getConfig($option);
+            return \Illuminate\Database\PostgresConnection::getConfig($option);
         }
         
         /**
@@ -3956,7 +3957,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function getDriverName()
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::getDriverName();
+            return \Illuminate\Database\PostgresConnection::getDriverName();
         }
         
         /**
@@ -3968,7 +3969,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function getQueryGrammar()
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::getQueryGrammar();
+            return \Illuminate\Database\PostgresConnection::getQueryGrammar();
         }
         
         /**
@@ -3981,7 +3982,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function setQueryGrammar($grammar)
         {
             //Method inherited from \Illuminate\Database\Connection            
-            \Illuminate\Database\MySqlConnection::setQueryGrammar($grammar);
+            \Illuminate\Database\PostgresConnection::setQueryGrammar($grammar);
         }
         
         /**
@@ -3993,7 +3994,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function getSchemaGrammar()
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::getSchemaGrammar();
+            return \Illuminate\Database\PostgresConnection::getSchemaGrammar();
         }
         
         /**
@@ -4006,7 +4007,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function setSchemaGrammar($grammar)
         {
             //Method inherited from \Illuminate\Database\Connection            
-            \Illuminate\Database\MySqlConnection::setSchemaGrammar($grammar);
+            \Illuminate\Database\PostgresConnection::setSchemaGrammar($grammar);
         }
         
         /**
@@ -4018,7 +4019,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function getPostProcessor()
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::getPostProcessor();
+            return \Illuminate\Database\PostgresConnection::getPostProcessor();
         }
         
         /**
@@ -4031,7 +4032,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function setPostProcessor($processor)
         {
             //Method inherited from \Illuminate\Database\Connection            
-            \Illuminate\Database\MySqlConnection::setPostProcessor($processor);
+            \Illuminate\Database\PostgresConnection::setPostProcessor($processor);
         }
         
         /**
@@ -4043,7 +4044,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function getEventDispatcher()
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::getEventDispatcher();
+            return \Illuminate\Database\PostgresConnection::getEventDispatcher();
         }
         
         /**
@@ -4056,7 +4057,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function setEventDispatcher($events)
         {
             //Method inherited from \Illuminate\Database\Connection            
-            \Illuminate\Database\MySqlConnection::setEventDispatcher($events);
+            \Illuminate\Database\PostgresConnection::setEventDispatcher($events);
         }
         
         /**
@@ -4068,7 +4069,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function unsetEventDispatcher()
         {
             //Method inherited from \Illuminate\Database\Connection            
-            \Illuminate\Database\MySqlConnection::unsetEventDispatcher();
+            \Illuminate\Database\PostgresConnection::unsetEventDispatcher();
         }
         
         /**
@@ -4080,7 +4081,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function pretending()
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::pretending();
+            return \Illuminate\Database\PostgresConnection::pretending();
         }
         
         /**
@@ -4092,7 +4093,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function getQueryLog()
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::getQueryLog();
+            return \Illuminate\Database\PostgresConnection::getQueryLog();
         }
         
         /**
@@ -4104,7 +4105,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function flushQueryLog()
         {
             //Method inherited from \Illuminate\Database\Connection            
-            \Illuminate\Database\MySqlConnection::flushQueryLog();
+            \Illuminate\Database\PostgresConnection::flushQueryLog();
         }
         
         /**
@@ -4116,7 +4117,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function enableQueryLog()
         {
             //Method inherited from \Illuminate\Database\Connection            
-            \Illuminate\Database\MySqlConnection::enableQueryLog();
+            \Illuminate\Database\PostgresConnection::enableQueryLog();
         }
         
         /**
@@ -4128,7 +4129,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function disableQueryLog()
         {
             //Method inherited from \Illuminate\Database\Connection            
-            \Illuminate\Database\MySqlConnection::disableQueryLog();
+            \Illuminate\Database\PostgresConnection::disableQueryLog();
         }
         
         /**
@@ -4140,7 +4141,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function logging()
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::logging();
+            return \Illuminate\Database\PostgresConnection::logging();
         }
         
         /**
@@ -4152,7 +4153,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function getDatabaseName()
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::getDatabaseName();
+            return \Illuminate\Database\PostgresConnection::getDatabaseName();
         }
         
         /**
@@ -4165,7 +4166,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function setDatabaseName($database)
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::setDatabaseName($database);
+            return \Illuminate\Database\PostgresConnection::setDatabaseName($database);
         }
         
         /**
@@ -4177,7 +4178,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function getTablePrefix()
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::getTablePrefix();
+            return \Illuminate\Database\PostgresConnection::getTablePrefix();
         }
         
         /**
@@ -4190,7 +4191,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function setTablePrefix($prefix)
         {
             //Method inherited from \Illuminate\Database\Connection            
-            \Illuminate\Database\MySqlConnection::setTablePrefix($prefix);
+            \Illuminate\Database\PostgresConnection::setTablePrefix($prefix);
         }
         
         /**
@@ -4203,7 +4204,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function withTablePrefix($grammar)
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::withTablePrefix($grammar);
+            return \Illuminate\Database\PostgresConnection::withTablePrefix($grammar);
         }
         
         /**
@@ -4217,7 +4218,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function resolverFor($driver, $callback)
         {
             //Method inherited from \Illuminate\Database\Connection            
-            \Illuminate\Database\MySqlConnection::resolverFor($driver, $callback);
+            \Illuminate\Database\PostgresConnection::resolverFor($driver, $callback);
         }
         
         /**
@@ -4230,7 +4231,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function getResolver($driver)
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::getResolver($driver);
+            return \Illuminate\Database\PostgresConnection::getResolver($driver);
         }
         
         /**
@@ -4245,7 +4246,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function transaction($callback, $attempts = 1)
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::transaction($callback, $attempts);
+            return \Illuminate\Database\PostgresConnection::transaction($callback, $attempts);
         }
         
         /**
@@ -4258,7 +4259,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function beginTransaction()
         {
             //Method inherited from \Illuminate\Database\Connection            
-            \Illuminate\Database\MySqlConnection::beginTransaction();
+            \Illuminate\Database\PostgresConnection::beginTransaction();
         }
         
         /**
@@ -4270,7 +4271,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function commit()
         {
             //Method inherited from \Illuminate\Database\Connection            
-            \Illuminate\Database\MySqlConnection::commit();
+            \Illuminate\Database\PostgresConnection::commit();
         }
         
         /**
@@ -4283,7 +4284,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function rollBack($toLevel = null)
         {
             //Method inherited from \Illuminate\Database\Connection            
-            \Illuminate\Database\MySqlConnection::rollBack($toLevel);
+            \Illuminate\Database\PostgresConnection::rollBack($toLevel);
         }
         
         /**
@@ -4295,7 +4296,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function transactionLevel()
         {
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::transactionLevel();
+            return \Illuminate\Database\PostgresConnection::transactionLevel();
         }
          
     }
@@ -9828,7 +9829,29 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
          */ 
         public static function hasTable($table)
         {
-            return \Illuminate\Database\Schema\MySqlBuilder::hasTable($table);
+            return \Illuminate\Database\Schema\PostgresBuilder::hasTable($table);
+        }
+        
+        /**
+         * Drop all tables from the database.
+         *
+         * @return void 
+         * @static 
+         */ 
+        public static function dropAllTables()
+        {
+            \Illuminate\Database\Schema\PostgresBuilder::dropAllTables();
+        }
+        
+        /**
+         * Drop all views from the database.
+         *
+         * @return void 
+         * @static 
+         */ 
+        public static function dropAllViews()
+        {
+            \Illuminate\Database\Schema\PostgresBuilder::dropAllViews();
         }
         
         /**
@@ -9840,29 +9863,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
          */ 
         public static function getColumnListing($table)
         {
-            return \Illuminate\Database\Schema\MySqlBuilder::getColumnListing($table);
-        }
-        
-        /**
-         * Drop all tables from the database.
-         *
-         * @return void 
-         * @static 
-         */ 
-        public static function dropAllTables()
-        {
-            \Illuminate\Database\Schema\MySqlBuilder::dropAllTables();
-        }
-        
-        /**
-         * Drop all views from the database.
-         *
-         * @return void 
-         * @static 
-         */ 
-        public static function dropAllViews()
-        {
-            \Illuminate\Database\Schema\MySqlBuilder::dropAllViews();
+            return \Illuminate\Database\Schema\PostgresBuilder::getColumnListing($table);
         }
         
         /**
@@ -9875,7 +9876,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function defaultStringLength($length)
         {
             //Method inherited from \Illuminate\Database\Schema\Builder            
-            \Illuminate\Database\Schema\MySqlBuilder::defaultStringLength($length);
+            \Illuminate\Database\Schema\PostgresBuilder::defaultStringLength($length);
         }
         
         /**
@@ -9889,7 +9890,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function hasColumn($table, $column)
         {
             //Method inherited from \Illuminate\Database\Schema\Builder            
-            return \Illuminate\Database\Schema\MySqlBuilder::hasColumn($table, $column);
+            return \Illuminate\Database\Schema\PostgresBuilder::hasColumn($table, $column);
         }
         
         /**
@@ -9903,7 +9904,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function hasColumns($table, $columns)
         {
             //Method inherited from \Illuminate\Database\Schema\Builder            
-            return \Illuminate\Database\Schema\MySqlBuilder::hasColumns($table, $columns);
+            return \Illuminate\Database\Schema\PostgresBuilder::hasColumns($table, $columns);
         }
         
         /**
@@ -9917,7 +9918,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function getColumnType($table, $column)
         {
             //Method inherited from \Illuminate\Database\Schema\Builder            
-            return \Illuminate\Database\Schema\MySqlBuilder::getColumnType($table, $column);
+            return \Illuminate\Database\Schema\PostgresBuilder::getColumnType($table, $column);
         }
         
         /**
@@ -9931,7 +9932,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function table($table, $callback)
         {
             //Method inherited from \Illuminate\Database\Schema\Builder            
-            \Illuminate\Database\Schema\MySqlBuilder::table($table, $callback);
+            \Illuminate\Database\Schema\PostgresBuilder::table($table, $callback);
         }
         
         /**
@@ -9945,7 +9946,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function create($table, $callback)
         {
             //Method inherited from \Illuminate\Database\Schema\Builder            
-            \Illuminate\Database\Schema\MySqlBuilder::create($table, $callback);
+            \Illuminate\Database\Schema\PostgresBuilder::create($table, $callback);
         }
         
         /**
@@ -9958,7 +9959,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function drop($table)
         {
             //Method inherited from \Illuminate\Database\Schema\Builder            
-            \Illuminate\Database\Schema\MySqlBuilder::drop($table);
+            \Illuminate\Database\Schema\PostgresBuilder::drop($table);
         }
         
         /**
@@ -9971,7 +9972,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function dropIfExists($table)
         {
             //Method inherited from \Illuminate\Database\Schema\Builder            
-            \Illuminate\Database\Schema\MySqlBuilder::dropIfExists($table);
+            \Illuminate\Database\Schema\PostgresBuilder::dropIfExists($table);
         }
         
         /**
@@ -9985,7 +9986,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function rename($from, $to)
         {
             //Method inherited from \Illuminate\Database\Schema\Builder            
-            \Illuminate\Database\Schema\MySqlBuilder::rename($from, $to);
+            \Illuminate\Database\Schema\PostgresBuilder::rename($from, $to);
         }
         
         /**
@@ -9997,7 +9998,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function enableForeignKeyConstraints()
         {
             //Method inherited from \Illuminate\Database\Schema\Builder            
-            return \Illuminate\Database\Schema\MySqlBuilder::enableForeignKeyConstraints();
+            return \Illuminate\Database\Schema\PostgresBuilder::enableForeignKeyConstraints();
         }
         
         /**
@@ -10009,7 +10010,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function disableForeignKeyConstraints()
         {
             //Method inherited from \Illuminate\Database\Schema\Builder            
-            return \Illuminate\Database\Schema\MySqlBuilder::disableForeignKeyConstraints();
+            return \Illuminate\Database\Schema\PostgresBuilder::disableForeignKeyConstraints();
         }
         
         /**
@@ -10021,7 +10022,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function getConnection()
         {
             //Method inherited from \Illuminate\Database\Schema\Builder            
-            return \Illuminate\Database\Schema\MySqlBuilder::getConnection();
+            return \Illuminate\Database\Schema\PostgresBuilder::getConnection();
         }
         
         /**
@@ -10034,7 +10035,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function setConnection($connection)
         {
             //Method inherited from \Illuminate\Database\Schema\Builder            
-            return \Illuminate\Database\Schema\MySqlBuilder::setConnection($connection);
+            return \Illuminate\Database\Schema\PostgresBuilder::setConnection($connection);
         }
         
         /**
@@ -10047,7 +10048,7 @@ ide-helper:generate         * Determine if the user was authenticated via "remem
         public static function blueprintResolver($resolver)
         {
             //Method inherited from \Illuminate\Database\Schema\Builder            
-            \Illuminate\Database\Schema\MySqlBuilder::blueprintResolver($resolver);
+            \Illuminate\Database\Schema\PostgresBuilder::blueprintResolver($resolver);
         }
          
     }
