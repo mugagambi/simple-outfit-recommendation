@@ -591,13 +591,13 @@ $.ajax(settings).done(function (response) {
 
 <!-- END_6bd3206374b256d9575a67180f788f61 -->
 
-<!-- START_71a074228bdaee7d7b7ca85603df3c2c -->
+<!-- START_2bb5e81c8f07faef86818c25738543d7 -->
 ## returns a list of outfits by the logged in user given a weather group.
 
 > Example request:
 
 ```bash
-curl -X GET "http://localhost/api/outfits//weather/{weather_id}" \
+curl -X GET "http://localhost/api/outfits/weather/{weather_id}" \
 -H "Accept: application/json"
 ```
 
@@ -605,7 +605,7 @@ curl -X GET "http://localhost/api/outfits//weather/{weather_id}" \
 var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost/api/outfits//weather/{weather_id}",
+    "url": "http://localhost/api/outfits/weather/{weather_id}",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -624,12 +624,12 @@ null
 ```
 
 ### HTTP Request
-`GET api/outfits//weather/{weather_id}`
+`GET api/outfits/weather/{weather_id}`
 
-`HEAD api/outfits//weather/{weather_id}`
+`HEAD api/outfits/weather/{weather_id}`
 
 
-<!-- END_71a074228bdaee7d7b7ca85603df3c2c -->
+<!-- END_2bb5e81c8f07faef86818c25738543d7 -->
 
 #WeatherGroups
 Weather Groups Api Resource

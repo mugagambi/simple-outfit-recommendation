@@ -564,17 +564,17 @@ $.ajax(settings).done(function (response) {
 <h3>HTTP Request</h3>
 <p><code>DELETE api/outfits/{outfit}</code></p>
 <!-- END_6bd3206374b256d9575a67180f788f61 -->
-<!-- START_71a074228bdaee7d7b7ca85603df3c2c -->
+<!-- START_2bb5e81c8f07faef86818c25738543d7 -->
 <h2>returns a list of outfits by the logged in user given a weather group.</h2>
 <blockquote>
 <p>Example request:</p>
 </blockquote>
-<pre><code class="language-bash">curl -X GET "http://localhost/api/outfits//weather/{weather_id}" \
+<pre><code class="language-bash">curl -X GET "http://localhost/api/outfits/weather/{weather_id}" \
 -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "http://localhost/api/outfits//weather/{weather_id}",
+    "url": "http://localhost/api/outfits/weather/{weather_id}",
     "method": "GET",
     "headers": {
         "accept": "application/json"
@@ -589,9 +589,9 @@ $.ajax(settings).done(function (response) {
 </blockquote>
 <pre><code class="language-json">null</code></pre>
 <h3>HTTP Request</h3>
-<p><code>GET api/outfits//weather/{weather_id}</code></p>
-<p><code>HEAD api/outfits//weather/{weather_id}</code></p>
-<!-- END_71a074228bdaee7d7b7ca85603df3c2c -->
+<p><code>GET api/outfits/weather/{weather_id}</code></p>
+<p><code>HEAD api/outfits/weather/{weather_id}</code></p>
+<!-- END_2bb5e81c8f07faef86818c25738543d7 -->
 <h1>WeatherGroups</h1>
 <p>Weather Groups Api Resource</p>
 <!-- START_40a1e4796345e29908a5a9580142e7d0 -->
