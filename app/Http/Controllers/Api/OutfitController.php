@@ -24,7 +24,7 @@ class OutfitController extends Controller
      */
     public function index()
     {
-        return new OutfitCollection(Outfit::where('user_id', Auth::User()->id)->paginate(20));
+        return new OutfitCollection(Outfit::where('user_id', Auth::User()->id)->get());
     }
 
     /**
@@ -37,7 +37,7 @@ class OutfitController extends Controller
     {
 
         return new OutfitCollection(Outfit::where('user_id', Auth::User()->id)
-            ->where('weathe_group_id', $weather_id)->paginate(20));
+            ->where('weathe_group_id', $weather_id)->get());
     }
 
 

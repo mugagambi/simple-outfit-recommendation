@@ -20,7 +20,7 @@ class OutfitCategoryController extends Controller
      */
     public function index()
     {
-        return new OutfitCategoryResourceCollection(OutfitCategory::paginate(20));
+        return new OutfitCategoryResourceCollection(OutfitCategory::all());
     }
 
     /**

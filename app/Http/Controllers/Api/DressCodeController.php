@@ -20,7 +20,7 @@ class DressCodeController extends Controller
      */
     public function index()
     {
-        return new DressCodeResourceCollection(DressMode::paginate(20));
+        return new DressCodeResourceCollection(DressMode::all());
     }
 
     /**
