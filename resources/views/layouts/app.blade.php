@@ -35,6 +35,9 @@
                 <ul class="navbar-nav mr-auto">
                     @if(Auth::check())
                         <li class="nav-item">
+                            <a class="nav-link" href="{{ route('weather.index') }}">Daily Weather</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="{{ route('weather-groups.index') }}">Weather Groups</a>
                         </li>
                         <li class="nav-item">

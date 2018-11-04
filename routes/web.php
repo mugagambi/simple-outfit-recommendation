@@ -29,3 +29,5 @@ Route::resource('outfit-categories', 'OutfitCategoryController')->middleware('au
 
 Route::get('/broadcast-sms', 'BroadCastSmsController@show_form')->name('show_broadcast_form');
 Route::post('/broadcast-sms', 'BroadCastSmsController@send_sms')->name('send_sms');
+
+Route::resource('weather', 'WeatherController');
