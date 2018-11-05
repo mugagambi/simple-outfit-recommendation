@@ -592,6 +592,39 @@ $.ajax(settings).done(function (response) {
 <p><code>GET api/outfits/weather/{weather_id}</code></p>
 <p><code>HEAD api/outfits/weather/{weather_id}</code></p>
 <!-- END_2bb5e81c8f07faef86818c25738543d7 -->
+<h1>Weather</h1>
+<p>Fetch weather</p>
+<!-- START_4ca078b560da12f92c41fcb5d9bcea98 -->
+<h2>Fetch the weather for a given place</h2>
+<p>place_code query param is required
+date query param is required
+example query <a href="http://127.0.0.1:8000/api/weather?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU0MTQ0MTY0MCwiZXhwIjoxNTQxNDQ1MjQwLCJuYmYiOjE1NDE0NDE2NDAsImp0aSI6IlU0ZkFZVFdQMkZ5RXJTTnYiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.m6URX8fHzUXgQjPypPaMYGqTKywOHo725iGEE6NDIm8&amp;amp;place_code=NAI&amp;amp;date=2018-11-04">http://127.0.0.1:8000/api/weather?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU0MTQ0MTY0MCwiZXhwIjoxNTQxNDQ1MjQwLCJuYmYiOjE1NDE0NDE2NDAsImp0aSI6IlU0ZkFZVFdQMkZ5RXJTTnYiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.m6URX8fHzUXgQjPypPaMYGqTKywOHo725iGEE6NDIm8&amp;amp;place_code=NAI&amp;amp;date=2018-11-04</a></p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET "http://localhost/api/weather" \
+-H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://localhost/api/weather",
+    "method": "GET",
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});</code></pre>
+<blockquote>
+<p>Example response:</p>
+</blockquote>
+<pre><code class="language-json">null</code></pre>
+<h3>HTTP Request</h3>
+<p><code>GET api/weather</code></p>
+<p><code>HEAD api/weather</code></p>
+<!-- END_4ca078b560da12f92c41fcb5d9bcea98 -->
 <h1>WeatherGroups</h1>
 <p>Weather Groups Api Resource</p>
 <!-- START_40a1e4796345e29908a5a9580142e7d0 -->

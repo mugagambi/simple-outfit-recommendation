@@ -18,6 +18,7 @@ Route::middleware('')->get('/user', function (Request $request) {
     return $request->user();
 });
 Route::middleware(['jwt.auth'])->group(function () {
+    Route::get('/weather', 'Api\WeatherController@index');
     Route::get('/weather-groups', 'Api\WeatherGroupController@index');
     Route::get('/weather-groups/{id}', 'Api\WeatherGroupController@show');
     Route::get('/events', 'Api\EventController@index');

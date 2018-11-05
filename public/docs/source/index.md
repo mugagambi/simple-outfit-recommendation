@@ -631,6 +631,51 @@ null
 
 <!-- END_2bb5e81c8f07faef86818c25738543d7 -->
 
+#Weather
+Fetch weather
+<!-- START_4ca078b560da12f92c41fcb5d9bcea98 -->
+## Fetch the weather for a given place
+place_code query param is required
+date query param is required
+example query http://127.0.0.1:8000/api/weather?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTU0MTQ0MTY0MCwiZXhwIjoxNTQxNDQ1MjQwLCJuYmYiOjE1NDE0NDE2NDAsImp0aSI6IlU0ZkFZVFdQMkZ5RXJTTnYiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.m6URX8fHzUXgQjPypPaMYGqTKywOHo725iGEE6NDIm8&amp;place_code=NAI&amp;date=2018-11-04
+
+> Example request:
+
+```bash
+curl -X GET "http://localhost/api/weather" \
+-H "Accept: application/json"
+```
+
+```javascript
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://localhost/api/weather",
+    "method": "GET",
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});
+```
+
+> Example response:
+
+```json
+null
+```
+
+### HTTP Request
+`GET api/weather`
+
+`HEAD api/weather`
+
+
+<!-- END_4ca078b560da12f92c41fcb5d9bcea98 -->
+
 #WeatherGroups
 Weather Groups Api Resource
 <!-- START_40a1e4796345e29908a5a9580142e7d0 -->
