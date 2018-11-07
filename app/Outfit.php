@@ -10,7 +10,7 @@ class Outfit extends Model
      * mass assignable
      * @var array
      */
-    protected $fillable = ['name', 'photo_url', 'user_id', 'outfit_category_id', 'weathe_group_id'];
+    protected $fillable = ['name', 'photo_url', 'user_id', 'outfit_category_id', 'weathe_group_id', 'event_id'];
 
     /**
      * Get the outfit category that the outfit belongs to.
@@ -26,5 +26,13 @@ class Outfit extends Model
     public function weather_group()
     {
         return $this->belongsTo('App\WeatherGroup');
+    }
+
+    /**
+     * Get the weather group that the outfit belongs to.
+     */
+    public function event()
+    {
+        return $this->belongsTo('App\Event');
     }
 }

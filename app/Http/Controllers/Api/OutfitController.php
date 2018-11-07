@@ -40,6 +40,18 @@ class OutfitController extends Controller
             ->where('weathe_group_id', $weather_id)->get());
     }
 
+    /**
+     * returns a list of outfits by the logged in user given an event.
+     *
+     * @param $event_id
+     * @return OutfitCollection
+     */
+    public function by_event($event_id)
+    {
+
+        return new OutfitCollection(Outfit::where('user_id', Auth::User()->id)
+            ->where('event_id', $event_id)->get());
+    }
 
     /**
      * Add new outfit by the logged in user
@@ -54,7 +66,8 @@ class OutfitController extends Controller
             'photo_url' => $request->input('photo_url'),
             'outfit_category_id' => $request->input('outfit_category_id'),
             'user_id' => Auth::user()->id,
-            'weathe_group_id' => $request->input('weather_group_id')
+            'weathe_group_id' => $request->input('weather_group_id'),
+            'event_id' => $request->input('event_id'),
         ]);
         return new OutfitResource($outfit);
     }
@@ -84,6 +97,7 @@ class OutfitController extends Controller
         $outfit->photo_url = $request->input('photo_url');
         $outfit->outfit_category_id = $request->input('outfit_category_id');
         $outfit->weathe_group_id = $request->input('weather_group_id');
+        $outfit->event_id = $request->input('event_id');
         $outfit->save();
         return new OutfitResource($outfit);
     }

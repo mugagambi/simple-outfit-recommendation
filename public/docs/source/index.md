@@ -424,6 +424,7 @@ curl -X POST "http://localhost/api/outfits" \
     -d "photo_url"="http://legros.com/" \
     -d "outfit_category_id"="consectetur" \
     -d "weather_group_id"="consectetur" \
+    -d "event_id"="consectetur" \
 
 ```
 
@@ -437,7 +438,8 @@ var settings = {
         "name": "consectetur",
         "photo_url": "http:\/\/legros.com\/",
         "outfit_category_id": "consectetur",
-        "weather_group_id": "consectetur"
+        "weather_group_id": "consectetur",
+        "event_id": "consectetur"
 },
     "headers": {
         "accept": "application/json"
@@ -461,6 +463,7 @@ Parameter | Type | Status | Description
     photo_url | url |  required  | 
     outfit_category_id | string |  required  | 
     weather_group_id | string |  required  | 
+    event_id | string |  required  | 
 
 <!-- END_53df37f9d63713a9a2cb4ea863657ab5 -->
 
@@ -516,6 +519,7 @@ curl -X PUT "http://localhost/api/outfits/{outfit}" \
     -d "photo_url"="http://www.johnston.com/" \
     -d "outfit_category_id"="eaque" \
     -d "weather_group_id"="eaque" \
+    -d "event_id"="eaque" \
 
 ```
 
@@ -529,7 +533,8 @@ var settings = {
         "name": "eaque",
         "photo_url": "http:\/\/www.johnston.com\/",
         "outfit_category_id": "eaque",
-        "weather_group_id": "eaque"
+        "weather_group_id": "eaque",
+        "event_id": "eaque"
 },
     "headers": {
         "accept": "application/json"
@@ -555,6 +560,7 @@ Parameter | Type | Status | Description
     photo_url | url |  required  | 
     outfit_category_id | string |  required  | 
     weather_group_id | string |  required  | 
+    event_id | string |  required  | 
 
 <!-- END_8508f326f01ae2f614518b83258dd599 -->
 
@@ -630,6 +636,46 @@ null
 
 
 <!-- END_2bb5e81c8f07faef86818c25738543d7 -->
+
+<!-- START_94882502f6775308a471267372df6bd9 -->
+## returns a list of outfits by the logged in user given an event.
+
+> Example request:
+
+```bash
+curl -X GET "http://localhost/api/outfits/event/{event_id}" \
+-H "Accept: application/json"
+```
+
+```javascript
+var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": "http://localhost/api/outfits/event/{event_id}",
+    "method": "GET",
+    "headers": {
+        "accept": "application/json"
+    }
+}
+
+$.ajax(settings).done(function (response) {
+    console.log(response);
+});
+```
+
+> Example response:
+
+```json
+null
+```
+
+### HTTP Request
+`GET api/outfits/event/{event_id}`
+
+`HEAD api/outfits/event/{event_id}`
+
+
+<!-- END_94882502f6775308a471267372df6bd9 -->
 
 #Weather
 Fetch weather
